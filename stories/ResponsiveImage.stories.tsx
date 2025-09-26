@@ -1,6 +1,6 @@
 // components/responsiveImage/ResponsiveImage.stories.tsx
+import ResponsiveImage from '@/components/responsiveImage/ResponsiveImage';
 import type { Meta, StoryObj } from '@storybook/react';
-import ResponsiveImage from './ResponsiveImage';
 
 const meta = {
     title: 'Components/ResponsiveImage',
@@ -68,6 +68,7 @@ export const Default: Story = {
         src: 'https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?w=800',
         alt: 'Paesaggio montano',
         aspectRatio: '16/9',
+        lazy: true
     },
 };
 
@@ -257,6 +258,8 @@ export const Gallery: Story = {
     args: {
         src: 'https://images.unsplash.com/photo-1682687206741?w=400',
         alt: 'Immagine 1',
+        placeholder: "none",
+        fallback: "ciao"
     },
     render: () => (
         <div className="grid grid-cols-3 gap-4 w-[800px]">
@@ -286,6 +289,7 @@ export const LazyVsEager: Story = {
     args: {
         src: 'https://images.unsplash.com/photo-1682687206741?w=400',
         alt: 'Immagine 1',
+        aspectRatio: "4/3"
     },
     render: () => (
         <div className="space-y-8 w-[600px]">
