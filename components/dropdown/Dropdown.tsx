@@ -300,7 +300,7 @@ export const DropdownSubTrigger = ({
   </DropdownMenuPrimitive.SubTrigger>
 );
 
-export const DropdownSubContent = ({ className, ...props }: { className?: string }) => (
+export const DropdownSubContent = ({ className, ...props }: { className?: string,children:ReactNode }) => (
   <DropdownMenuPrimitive.SubContent
     className={cn(
       // Same styling as main dropdown using DaisyUI colors
@@ -318,7 +318,7 @@ export const DropdownSubContent = ({ className, ...props }: { className?: string
       className
     )}
     {...props}
-  />
+  >{props.children}</DropdownMenuPrimitive.SubContent>
 );
 
 // Wrapper components per submenu
