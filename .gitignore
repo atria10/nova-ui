@@ -1,44 +1,85 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Source files
+app/
+.next/
+.storybook/
+stories/
+public/
+scripts/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Development files
+*.config.js
+*.config.mjs
+*.config.ts
+tsconfig*.json
+tailwind.config.js
+next.config.js
+vitest.config.ts
+eslint.config.mjs
 
-# testing
-/coverage
+# Tests
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+**/*.stories.ts
+**/*.stories.tsx
+*.test.*
+*.spec.*
 
-# next.js
-/.next/
-/out/
+# Development dependencies
+node_modules/
 
-# production
-/build
+# IDE
+.vscode/
+.idea/
 
-# misc
+# OS
 .DS_Store
-*.pem
+Thumbs.db
 
-# debug
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# Build artifacts (keep only dist)
+build/
+out/
+storybook-static/
+
+# Environment files
 .env*
 
-# vercel
+# Temporary folders
+tmp/
+temp/
+
+# Editor backup files
+*~
+*.swp
+*.swo
+
+# Documentation source (keep only built docs)
+docs/
+*.md.backup
+
+# Git
+.git/
+.gitignore
+
+# Cache directories
+.cache/
+.parcel-cache/
+
+# Vercel
 .vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-
-*storybook.log
-storybook-static
